@@ -125,5 +125,3 @@ newpromise
 
 console.log("it has ran ");
 console.log("it has ran ");
-console.log("it has ran ");
-console.log("it has ran ");
