@@ -1,0 +1,99 @@
+{
+  // ── INLAY HINTS (JetBrains-style parameter & type hints) ──────────────────
+  "editor.inlayHints.enabled": "on",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+
+  // ── STICKY SCROLL (function/class name pinned at top) ─────────────────────
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyScroll.maxLineCount": 5,
+
+  // ── BREADCRUMBS (file path + code hierarchy at top) ───────────────────────
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.showFunctions": true,
+  "breadcrumbs.showClasses": true,
+  "breadcrumbs.showVariables": true,
+
+  // ── AUTO IMPORT & ORGANIZE ON SAVE ────────────────────────────────────────
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit"
+  },
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.suggest.autoImports": true,
+  "editor.formatOnSave": true,
+
+  // ── TYPESCRIPT STRICT & SMART FEATURES ────────────────────────────────────
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.referencesCodeLens.enabled": true,       // shows "X references" above functions
+  "typescript.implementationsCodeLens.enabled": true,  // shows "X implementations" above interfaces
+  "javascript.referencesCodeLens.enabled": true,
+
+  // ── ERROR LENS (install "Error Lens" extension) ───────────────────────────
+  "errorLens.enabled": true,
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info"],
+  "errorLens.followCursor": "allLines",
+
+  // ── GITLENS (install "GitLens" extension) ─────────────────────────────────
+  "gitlens.currentLine.enabled": true,
+  "gitlens.currentLine.format": "${author}, ${agoOrDate}",
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": true,
+
+  // ── EDITOR QUALITY OF LIFE ────────────────────────────────────────────────
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.linkedEditing": true,           // auto-rename matching HTML/JSX tags
+  "editor.suggest.preview": true,         // preview autocomplete inline
+  "editor.suggest.showStatusBar": true,
+  "editor.quickSuggestionsDelay": 0,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.parameterHints.enabled": true,
+  "editor.parameterHints.cycle": true,
+
+  // ── MINIMAP ───────────────────────────────────────────────────────────────
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.maxColumn": 80,
+
+  // ── FILE EXPLORER ─────────────────────────────────────────────────────────
+  "explorer.fileNesting.enabled": true,   // nest related files (e.g. index.ts + index.test.ts)
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.test.ts, ${capture}.spec.ts, ${capture}.d.ts",
+    "*.tsx": "${capture}.test.tsx, ${capture}.spec.tsx",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, .npmrc",
+    "tsconfig.json": "tsconfig.*.json",
+    ".eslintrc*": ".eslintignore, .prettierrc*, .prettierignore"
+  },
+
+  // ── SEARCH & EXCLUDE ──────────────────────────────────────────────────────
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.next": true,
+    "**/coverage": true
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/dist": true
+  },
+
+  // ── TERMINAL ──────────────────────────────────────────────────────────────
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.fontSize": 13,
+
+  // ── EXTENSIONS TO INSTALL ─────────────────────────────────────────────────
+  // Run these in terminal:
+  // code --install-extension usernamehw.errorlens
+  // code --install-extension eamodio.gitlens
+  // code --install-extension wix.vscode-import-cost
+  // code --install-extension streetsidesoftware.code-spell-checker
+}
