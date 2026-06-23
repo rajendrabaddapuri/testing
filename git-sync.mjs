@@ -16,8 +16,13 @@
  *    - Full rollback (merge --abort + stash restore) on any failure.
  *    - --dry-run, --verbose, --repo=<name>, --help flags.
  *
- *  USAGE
- *    node scripts/git-sync.mjs [--repo=<name>] [--verbose] [--dry-run] [--help]
+ *  USAGE — run directly with node (no package.json scripts needed):
+ *    node scripts/git-sync.mjs                       # sync all repos
+ *    node scripts/git-sync.mjs --verbose             # verbose output
+ *    node scripts/git-sync.mjs --repo=dss-monorepo   # only the monorepo
+ *    node scripts/git-sync.mjs --repo=dss-pw-tests   # only the pw-tests repo
+ *    node scripts/git-sync.mjs --dry-run             # show commands, run nothing
+ *    node scripts/git-sync.mjs --help                # this help
  *
  *  SAFETY GUARANTEES
  *    - Never drops a stash that did not apply cleanly.
@@ -84,10 +89,11 @@ function printHelp() {
 Git Sync Utility
 
 Usage:
-  npm run git:sync
-  npm run git:sync:verbose
-  npm run git:sync:mono
-  npm run git:sync:pw
+  node scripts/git-sync.mjs
+  node scripts/git-sync.mjs --verbose
+  node scripts/git-sync.mjs --repo=dss-monorepo
+  node scripts/git-sync.mjs --repo=dss-pw-tests
+  node scripts/git-sync.mjs --dry-run
 
 Flags:
   --verbose
