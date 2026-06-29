@@ -1,6 +1,6 @@
 /**
  * ============================================================================
- *  git-sync.mjs — Transactional Git Sync Utility
+ *  git-sync.mjs — Transactional Git Sync Utility testing
  * ============================================================================
  *
  *  PURPOSE
